@@ -1,0 +1,13 @@
+body{background:#EBEEF3;}
+#box{margin:0 auto; width:100%; height:599px; background:url(images/loginbg.jpg) repeat-x;}
+#login{margin:0 auto; width:380px; height:599px; background:url(images/login.jpg) no-repeat;}
+#logininput{margin:210px auto 0 60px; width:300px; height:auto; overflow:hidden;}
+#logininput dl{height:auto; overflow:hidden; width:300px;}
+#logininput dt{height:32px; line-height:32px; float:left; width:70px; text-align:right;}
+#logininput dd{height:32px; float:left; line-height:32px; width:210px; text-align:left;}
+.input200{width:150px; height:18px}
+.input100{width:60px; height:18px}
+#logininput li{width:147px; margin:10px auto 0 auto; height:auto; overflow:hidden; text-align:center;}
+#logininput li input{line-height:20px; width:60px; height:26px; font-size:14px;}
+
+

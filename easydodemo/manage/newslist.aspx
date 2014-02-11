@@ -1,0 +1,33 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="newslist.aspx.cs" Inherits="shop_manage_userlist" %>
+<%@ Register Src="uc/adminnav.ascx" TagPrefix="uc" TagName="adminnav" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>文章列表</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/mianpage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+ <div id="header">
+  <div id="topnav"></div>
+  <div id="admin"></div>
+ </div>
+ <div id="mainbody">  
+   <uc:adminnav ID="an" runat="server" Visible="true" />
+  <div id="shop_admin">
+    <h5>文章列表</h5>
+	<table id="newslist">
+	<tr><td id="id">编号</td><td id="title">文章标题</td><td id="browse">浏览数</td><td id="date">录入日期</td><td id="operating">操作</td></tr>
+	<asp:Literal ID="ltUserList" runat="server"></asp:Literal>
+	</table>
+   <a href="newsadd.aspx" class="adminlink">点此添加新文章</a>
+  </div>
+ </div>
+ <div id="footer"></div>
+</div>
+
+</body>
+</html>

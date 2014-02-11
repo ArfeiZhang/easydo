@@ -1,0 +1,70 @@
+﻿html,body,div,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,span,input,select,form,p,table,th,td,tr,tbody,thead {margin:0; padding:0; font-weight:normal}
+body{background:#fff; font-size:12px; font-family:Arial, Helvetica, sans-serif,"微软雅黑";}
+ul,li,dl,dt,dd{list-style-type:none}
+img{border:none}
+a:link{text-decoration:none;}
+
+a:hover{text-decoration:none}
+a:visited{text-decoration: none;}
+select,input{margin:0 3px; vertical-align:middle}
+
+#container{width:100%; height:auto; overflow:hidden}
+#header{width:100%; height:auto; overflow:hidden}
+#mianbody,#footer{width:960px; height:auto; overflow:hidden; margin:0 auto 10px auto;}
+
+.commodity{width:210px; overflow:hidden; height:auto; margin:10px 9px; padding:0 10px; float:left}
+.commodity a{color:#222; display:block}
+.commodity a img{width:100px; height:100px; margin:5px 55px}
+.commodity a span{line-height:180%; width:210px; height:42px; overflow:hidden; display:block; text-align:center}
+.commodity dl{width:200px; height:40px; line-height:40px}
+.commodity dl dt{widht:70px; font-size:9px; text-decoration:line-through; float:left;}
+.commodity dl dd{widht:90px; font-size:14px; font-weight:bold; float:right; color:#c00}
+
+.clear{clear:both;}
+.inupt{width:50px}
+.button{background:url(images/loginbutton.jpg); width:97px; height:33px; border:0; color:#FFF; font-size:16px; font-weight:bold}
+/*topnavbox*/
+#topnavbox{width:100%; height:24px; line-height:24px; background:#f4f4f4; border-bottom:#ddd 1px solid}
+#topnav{width:960px; height:24px; margin:0 auto;}
+#loginbox{float:left; width:auto; color:#888}
+#loginbox li{width:auto; margin:0 15px 0 0; float:left}
+#loginbox li a{color:#c00}
+#shoptool{float:right; width:auto; color:#888}
+#shoptool li{width:auto; margin:0 0 0 10px; float:left}
+#shoptool li a{color:#888; margin:0 10px 0 0}
+/*miannav*/
+#miannav{width:960px; height:auto; overflow:hidden; margin: 0 auto;}
+#logo{float:left; margin:20px 0 0 0}
+#logo a{display:block; width:300px; height:38px; text-indent:405px; white-space:nowrap; overflow:hidden; background:url(images/LOGO.jpg) no-repeat}
+#nav{float:right; width:600px; height:27px; margin:38px 0 0 0;}
+#nav li{float:left; width:65px; height:27px; line-height:27px; margin:0 15px 0 0; text-align:center; background:url(images/index_r2_c10.jpg) no-repeat;}
+#nav li a{color:#f00}
+/*search*/
+#search{width:960px; height:40px; margin:0 auto; background:url(images/index_r3_c6.jpg) repeat-x;}
+#menutitle{width:183px; height:34px; line-height:34px; text-align:center; float:left; background:url(images/index_r4_c2.jpg); margin:6px 0 0 0; font-size:14px; font-weight:bold}
+#searchbox{float:right; width:auto; margin:8px 20px 0 0}
+#searchbox select{width:80px;}
+#text{height:15px; width:240px; padding:1px 0 0 5px}
+#botton{height:24px; width:60px;}
+/*bottomnav*/
+#bottomnavbox{width:960px;	height:auto; overflow:hidden; padding:6px 0 0 0; background:url(images/index_r19_c3.jpg) no-repeat left top}
+#bottomnav{width:918px;	height:auto; overflow:hidden; padding:5px 20px; background:#f6f8f7; border-color:#ddd; border-style:solid; border-width:0 1px;}
+#bottomnav h6{width:137px; height:26px; line-height:26px; text-indent:10px; font-size:14px; font-weight:bold; margin:0 0 5px 0; color:#666; float:left}
+#bottomnav ul{width:183px; height:auto; overflow:auto; float:left; text-align:center; font-weight:bold}
+#bottomnav li{width:180px; height:20px; line-height:20px; overflow:hidden; font-weight:normal}
+#bottomnav li a{color:#aaa}
+#bottomnav_bg{width:960px; height:6px; background:url(images/index_r21_c3.jpg) no-repeat left top}
+/*link*/
+#link{width:960px; height:110px; overflow:hidden; margin:10px 0; border-bottom:#ddd 1px solid}
+#link dt{width:60px; float:left; height:100px; line-height:30px; text-align:center;}
+#link dd{width:890px; float:right; height:100px; margin:0 5px 0 0}
+#link dd a {line-height:30px; margin:0 20px 0 0; color:#aaa}
+/*copyright*/
+#copyrightbox{height:auto; overflow:hidden;; width:auto; margin:10px auto; text-align:center}
+#about{height:30px; line-height:30px;}
+#about a{margin:0 10px; color:#666}
+#copyright{margin:0 0 50px 0; line-height:24px;}
+/*left*/
+#left{float:left; width:183px; height:auto; overflow:hidden;}
+/*right*/
+#right{float:right; width:767px; height:auto; overflow:hidden; margin:10px 0 0 10px;}

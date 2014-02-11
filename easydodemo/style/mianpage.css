@@ -1,0 +1,146 @@
+/*asrt*/
+#asrt,#usernav{width:181px; height:auto; overflow:hidden; border-color:#c00; border-style:solid; border-width: 0 1px 1px 1px}
+#asrt h6,#usernav h6{width:181px; height:26px; line-height:26px; text-indent:10px; font-size:14px; font-weight:bold; color:#666; background:url(images/index_r5_c3.jpg) repeat-x}
+#asrt h6 a,#usernav h6 a{color:#666}
+#asrt ul,#usernav ul{width:181px; height:auto; overflow:hidden; margin:6px 0;}
+#asrt li{width:80px; height:18px; line-height:18px; margin:2px 0 2px 5px; float:left; text-align:center}
+#usernav li{width:160px; height:18px; line-height:18px; margin:2px 0 2px 5px; float:left; text-align:right}
+#asrt li a,#usernav li a{color:#bbb}
+/*knowledge*/
+#knowledge{float:right; width:183px; overflow:hidden; margin:10px 0 0 0; padding:0 0 3px 0; background:url(images/index_r13_c15.jpg) no-repeat left bottom}
+#knowledge_title{width:183px; height:29px; line-height:29px; background:url(images/index_r8_c15.jpg)}
+#knowledge_title dt{float:left; margin:0 0 0 10px; font-weight:bold}
+#knowledge_title dd{float:right; margin:0 10px 0 0;}
+#knowledge_title dd a{display:block; width:35px; height:26px; text-indent:36px; white-space:nowrap; overflow:hidden; background:url(images/more.jpg) no-repeat left center}
+#knowledge_list{width:173px; height:auto; overflow:hidden; border-color:#ddd; border-style:solid; border-width:0 1px; padding:10px 4px 0 4px}
+#knowledge_list li{width:165px; height:24px; line-height:24px; overflow:hidden; text-indent:15px; margin:0 0 0 5px; background:url(images/dot3.gif) no-repeat 0 11px}
+#knowledge_list li a{color:#222}
+/*leftAD*/
+#leftAD{height:auto; overflow:hidden}
+#leftAD a{width:183px; height:auto; overflow:hidden;}
+#leftAD a img{width:183px; height:110px; margin:10px 0 0 0}
+/*transbox*/
+#transbox{width:767px;	height:210px; margin:0 0 10px 0}
+#SlidePlayer {position:relative; margin: 0 auto;}
+.Slides{height: 210px;	overflow: hidden;}
+.Slides li {float: left; width: 767px;	height: 210px;}
+.Slides img{display: block; width: 767px; height: 210px;}
+.SlideTriggers{position: absolute; top: 185px; 	right: 0px; z-index: 10; height: 25px;}
+.SlideTriggers li{float: left; display: inline;	color: #fff; text-align: center; line-height:20px; width: 20px;	height: 20px; cursor: pointer; overflow: hidden; margin:0 6px; background:url(images/slide_trigger.jpg) no-repeat center center;}
+.SlideTriggers li.Current{color:#fff; background: url(images/slide_trigger_c.jpg) no-repeat center center; line-height: 20px; height: 20px; width: 20px; margin:0 6px;}
+/*optionbox*/
+#optionbox{width:767px;	height:auto; overflow:hidden; margin:0 0 10px 0}
+/*option*/
+#option{float:left; width:570px; height:auto; overflow:hidden;}
+#tabs0 {height: 200px; width: 400px; border: 1px solid #cbcbcb; background-color:#f2f6fb;}
+.menu0 {width: 570px; background:#ccc}
+.menu0 li{display:block; float:left; font-weight:bold; height:28px; line-height:28px; width:285px; text-align: center; cursor:pointer;background:url(images/index_r2_c3.jpg)}
+.menu0 li.hover{background:url(images/index_r2_c2.jpg)}
+.main{width:568px; height:auto; overflow:auto; border-color:#ddd; border-style:solid; border-width:0 1px 1px 1px;}
+#main0 ul{display: none;}
+#main0 ul.block{display: block;}
+.main ul li div{width:150px; overflow:hidden; height:auto; margin:5px 7px; padding:0 10px; float:left; position:relative}
+.main ul li div p{width:92px; height:20px; line-height:20px; font-family:Arial; text-align:left; position:relative; *top:100px; bottom:-100px; padding:0 4px; cursor:pointer; background-color:rgba(0,0,0,0.5);background:#f00\9; filter:alpha(opacity=65);}
+.main ul li div a{color:#222; display:block; margin:0 30px}
+.main ul li div a img{width:98px; height:98px; border:#ddd 1px solid}
+.main ul li div a span{line-height:180%; width:100px; height:44px; overflow:hidden; margin:3px 0; text-align:center; display:block}
+/*webnews*/
+#webnews{float:right; width:186px; overflow:hidden; margin:0 0 0 10px; padding:0 0 3px 0; background:url(images/index_r13_c14.jpg) no-repeat bottom}
+#webnews_title{width:186px; height:29px; line-height:29px; background:url(images/index_r8_c14.jpg)}
+#webnews_title dt{float:left; margin:0 0 0 10px; font-weight:bold}
+#webnews_title dd{float:right; margin:0 10px 0 0;}
+#webnews_title dd a{display:block; width:35px; height:26px; text-indent:36px; white-space:nowrap; overflow:hidden; background:url(images/more.jpg) no-repeat left center}
+#webnews_list{width:176px; height:auto; overflow:hidden; border-color:#ddd; border-style:solid; border-width:0 1px; padding:10px 4px 0 4px}
+#webnews_list li{width:170px; height:24px; line-height:24px; overflow:hidden; text-indent:15px; margin:0 0 0 5px; background:url(images/dot3.gif) no-repeat 0 11px}
+#webnews_list li a{color:#222}
+/*new and hot*/
+#new,#hot{width:767px; height:auto; overflow:hidden; margin:0 0 10px 0; padding:0 0 3px 0; background:url(images/index_r14_c8.jpg) no-repeat bottom}
+#newtitle,#hottitle{width:767px; height:26px; line-height:26px; background:url(images/index_r12_c8.jpg)}
+#newtitle dt,#hottitle dt{float:left; margin:0 3px; font-weight:bold}
+#newtitle dt span,#hottitle dt span{color:#c00; margin:0 5px}
+#newtitle dd,#hottitle dd{float:right; margin:0 10px 0 0}
+#newtitle dd a,#hottitle dd a{display:block; width:35px; height:26px; text-indent:36px; white-space:nowrap; overflow:hidden; background:url(images/more.jpg) no-repeat left center}
+#newlist,#hotlist{width:757px; height:auto; overflow:hidden; border-color:#ddd; border-style:solid; border-width:0 1px; padding:10px 4px}
+/*brand*/
+#brand{width:183px; height:auto; overflow:hidden; margin:10px 0 0 0; padding:0 0 7px 0; background:url(images/list_information_r6_c2.jpg) no-repeat left bottom}
+#brandtitle{width:183px; height:38px; line-height:38px; background:url(images/brand.jpg); text-indent:30px;}
+#brandtitle span{float:left; font-size:14px; color:#F00; font-weight:bold;}
+#brandtitle a{float:right; margin:0 10px 0 0; color:#bbb}
+#brandtitle a:hover{color:#666}
+#brandlist{width:173px; height:auto; overflow:hidden; padding:0 4px; border-color:#ccc; border-style:solid; border-width:0 1px}
+#brandlist a{width:70px; margin:6px 5px; float:left; color:#666; text-align:center; overflow:hidden;}
+
+
+/*commoditylist page*/
+#commodity{width:767px; height:auto; overflow:hidden; margin:0 0 10px 0;}
+#commoditysee{width:745px; height:30px; line-height:30px; margin:30px 0 10px 0; padding:0 10px; border:#ddd 1px solid; background:url(images/list_information_r4_c4.jpg) repeat-x; font-weight:bold}
+#commoditysee h6{float:left; font-size:12px; font-weight:normal; margin:0 10px 0 0}
+#commoditysee ul{float:left; width:auto}
+#commoditysee li{float:left; width:auto;}
+#commoditysee li a{color:#000; display:block; padding:0 10px}
+#commoditysee li a:hover{color:#fff; background:#c00;}
+#stat{float:right;}
+#stat span{color:#c00}
+#page{float:right; width:730px; text-align:right; margin:20px 0;}
+#commodity h5{font-size:16px; font-weight:bold; display:block; margin:15px 0 5px 0}
+#commodity1,#commodity2{width:767px; width:auto; overflow:hidden}
+#commodity1 img{float:left; width:338px; height:248px; border:#ddd 1px solid}
+#commodity1_infor{float:right; width:400px; height:230px; margin:10px 0;}
+#commodity1_infor li{width:400px; height:30px; line-height:30px;}
+#commodity1_infor li span{color:#FF0000; height:26px; font-size:16px; display:inline; margin:0 5px 0 0}
+#commodity1_infor h6{color:#bbb; height:30px; line-height:30px; font-size:12px; font-weight:normal; margin:0}
+#commodity_buy{width:360px; height:auto; overflow:hidden; padding:10px; border:#ddd 1px solid; background:#f5f5f5}
+#commodity_buy div{margin:15px 0}
+#commodity_buy input{width:30px}
+#commodity_buy span{margin:0 10px}
+#commodity_buy a{float:left; margin:0 10px}
+#commodity_buy a img{width:123px; height:31px; border:none}
+#commodity2 span{display:block; background:url(images/commodity_r4_c2.jpg) repeat-x; text-indent:10px; font-size:14px; font-weight:bold; margin:20px 0 0 0; height:40px; line-height:40px}
+#commodity2 p{height:auto; line-height:260%; font-size:16px; margin:5px 0;	white-space:pre-wrap;*white-space: pre;*word-wrap: break-word}
+/*infor list*/
+#listbox,#brandbox{width:767px; height:auto; overflow:hidden; margin:0 0 10px 0;}
+#listtitle{width:745px; height:30px; line-height:30px; padding:0 10px; border:#ddd 1px solid; background:url(images/list_information_r4_c4.jpg) repeat-x; font-weight:bold}
+#list{width:767px; height:auto; overflow:hidden;}
+#list ul{width:757px; height:auto; overflow:hidden; padding:0 5px 40px 5px;}
+#list li{width:757px; height:40px; line-height:40px; text-indent:16px; background:url(images/dot3.gif) no-repeat 0 17px; margin:5px 0 0 0}
+#list li a{float:left; color:#222; font-size:14px}
+#list li a:hover{color:#c00}
+#list li span{float:right; color:#CCC}
+#list ul table{float:right; width:auto; height:40px; line-height:40px; margin:10px 0 0 0; text-align:right; clear:both}
+#list ul table a{float:left;  margin:0 4px; width:auto; height:40px; line-height:42px; color:#222; font-size:12px}
+#brandbox a{width:120px; height:60px; margin:25px 15px; float:left}
+#brandbox a img{width:120px; height:60px;}
+#brandbox a span{display:block; width:120px; height:24px; line-height:24px; text-align:center}
+#brandbox table{float:right; width:auto; margin:30px 10px 0 0}
+#brandbox table a{float:left; display:block; margin:0 2px; width:30px; height:20px; line-height:20px; color:#222}
+/*infor*/
+#infor{width:767px; height:auto; overflow:hidden; margin:0 0 10px 10px;}
+#infortitle{width:767px; height:30px; line-height:30px; text-align:center; font-size:16px;}
+#infor span{width:767px; height:16px; line-height:16px; text-align:center; font-size:12px; display:block; border-bottom:#ddd 2px solid; padding:0 0 10px 0; margin:10px 0}
+#infor p{width:757px; height:auto; line-height:260%; font-size:16px; margin:5px 0;	white-space:pre-wrap;*white-space: pre;*word-wrap: break-word}
+/*user*/
+#user{width:767px; height:auto; overflow:hidden; margin:10px 0 0 0;}
+#user h4{font-size:14px; font-weight:normal; width:100%; padding:0 0 3px 0; border-bottom:#ddd 1px dotted}
+#user span{font-size:12px;}
+#user span a{font-size:14px; font-weight:bold; color:#f00}
+#user_oreder,#user_messages£¬#user_infor,#user_key,#user_add{width:767px; height:auto; overflow:hidden; padding:1px 0;}
+#user_oreder table{height:auto; overflow:hidden; width:100%;}
+#user_oreder table thead{height:34px; width:100%; background:#f9f9f9;}
+#user_oreder table tbody{height:34px; width:100%; text-align:center; vertical-align:middle; line-height:16px}
+#user_oreder table tbody tr td{color:#aaa; height:40px; border-bottom:#ddd 1px dotted}
+#user_oreder table tbody a{margin:0 4px; color:#c00}
+#user_messages ul li{width:767px; line-height:50px; font-size:14px}
+#user_messages span{width:760px; padding:0 7px 0 0; text-align:right; line-height:34px; display:block; background:#f9f9f9; border-bottom:#ddd 1px dotted;}
+#user_messages p{width:767px; line-height:260%; display:block; border-bottom:#ddd 1px dotted;}
+#user_messages textarea{width:567px; height:150px; line-height:180%; margin:70px auto 10px 100px;}
+#user_messages label{line-height:180%; margin:0 0 0 100px;}
+#user_messages table{width:767px; height:auto; overflow:hidden;}
+#user_messages table thead{background:#f9f9f9; height:40px; line-height:40px; text-align:center}
+#user_messages table thead tr td,#user_messages table tbody tr td{ text-align:center}
+#user_messages table tbody tr td{height:26px}
+
+#user_messages div,#user_infor div,#user_key div,#user_add div{margin:50px 0; width:100%; padding:40px 0 0 0; border-top:#ddd 1px dotted; text-align:center}
+#user_infor table,#user_key table,#user_add table{margin:40px 0 40px 160px; width:507px;}
+#user_infor table tr,#user_key table tr,#user_add table tr{height:34px; line-height:34px}
+#user_infor table tr th,#user_key table tr th,#user_add table tr th{text-align:right; line-height:16px; width:120px; padding:0 10px 0 0}
+#user_infor table input{vertical-align:middle}

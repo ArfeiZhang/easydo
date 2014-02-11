@@ -1,0 +1,85 @@
+body{background:#ecf2fe}
+th{text-align:right; font-weight:normal; padding:0 10px 0 0}
+
+.adminlink{float:right}
+.paged{text-align:right; margin:10px 0 0 0; width:750px; line-height:30px; border-top:#ddd 1px dashed}
+
+#topnav{height:100px; width:100%}
+#admin{width:1003px; height:40px;}
+
+#miannav{height:auto; overflow:hidden; width:190px; float:left; margin:0 0 0 6px; position:relative; left:1px}
+#miannav li{width:190px; height:40px; line-height:40px; margin:10px 0; text-align:center;  z-index:1}
+#miannav li a{display:block;}
+#miannav li a:hover{background:url(images/ADMIN_r2_c3.jpg); text-decoration:none}
+
+#shop_admin{float:left; width:758px; height:auto; overflow:hidden; background:#fff; border:#a6c6db 1px solid; padding:20px 20px 50% 20px}  
+#shop_admin h5{width:758px; height:40px; line-height:40px; margin:0 0 10px 0; text-indent:10px; background:#ecf2fe}
+
+#adminadd table,#adminedit table,#usermodifypassword table{width:400px; margin:20px auto;}
+#adminadd table tr,#adminedit table tr,#usermodifypassword table tr{width:400px; height:34px; line-height:34px}
+#adminadd table tr th,#adminedit table tr th,#usermodifypassword table tr th{width:80px; text-align:right; font-weight:normal}
+
+#userlist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#userlist td{width:150px; height:26px; text-align:center;}
+#useredit table tr{height:30px; line-height:30px}
+
+#orderlist{width:750px; height:auto; overflow:hidden; margin:0 4px; border:0}
+#orderlist td{height:26px; text-align:center;}
+#orderlist #id{width:30px;}
+#orderlist #time{width:120px;}
+#orderlist #username{width:100px}
+#orderlist #people{width:60px;}
+#orderlist #add{}
+#orderlist #money{width:40px;}
+#orderlist #state{width:100px;}
+#orderlist #operating{width:60px;}
+
+#orderedit table tr{height:30px; line-height:30px}
+#orderedit table tr th{text-align:right; font-weight:normal}
+#orderedit table tr td{width:auto; padding:0 10px}
+
+#productlist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#productlist td{height:26px; text-align:center;}
+#productlist #id{width:30px}
+#productlist #productname{width:460px}
+#productlist #browse{width:80px;}
+#productlist #date{width:120px;}
+#productlist #operating{width:60px;}
+
+#newslist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#newslist td{height:26px; text-align:center;}
+#newslist #id{width:30px}
+#newslist #title{width:460px}
+#newslist #browse{width:80px;}
+#newslist #date{width:120px;}
+#newslist #operating{width:60px;}
+
+#productclasslist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#productclasslist td{height:26px; text-align:center;}
+#productclasslist #id{width:60px}
+#productclasslist #name{width:600px}
+#productclasslist #operating{width:90px;}
+
+#productbrandlist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#productbrandlist td{height:26px; text-align:center;}
+#productbrandlist #id{width:100px}
+#productbrandlist #name{width:450px}
+#productbrandlist #taxis{width:100px}
+#productbrandlist #operating{width:100px}
+
+#messegelist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#messegelist td{width:250px; height:26px; text-align:center;}
+
+#linklist{width:752px; height:auto; overflow:hidden; margin:0 3px}
+#linklist td{width:188px; height:26px; text-align:center;}
+
+#adminlist{width:750px; height:auto; overflow:hidden; margin:0 4px}
+#adminlist td{width:150px; height:26px; text-align:center;}
+
+#adlist{width:752px; height:auto; overflow:hidden; margin:0 3px}
+#adlist td{height:26px; text-align:center;}
+#adlist td{height:26px; text-align:center;}
+#adlist #id{width:100px}
+#adlist #name{width:450px}
+#adlist #taxis{width:100px}
+#adlist #operating{width:100px}

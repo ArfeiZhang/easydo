@@ -1,0 +1,12 @@
+2014/1/26
+修改数据库连接字符串，可以在ReisDb指定SQL连接字符串信息
+
+如： 
+
+<appSettings>
+    <add key="ReisDb"  value="connectionStrings.MobileDB_INSERT"/>
+    <add key="SitePath" value="/"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="MobileDB_INSERT" connectionString="Server=devdb.dev.sh.ctriptravel.com,28747;UID=uws_central;password=Dyu3UR0bJBun;database=MobileDB;" providerName="System.Data.SqlClient" />
+  </connectionStrings>

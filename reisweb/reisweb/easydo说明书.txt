@@ -1,0 +1,149 @@
+					锐思网络工作室easydo智能闪速开发工具箱
+							使用说明书
+
+锐思网络工作室发现，在网站开发过程中，程序员在花80%的精力去开发无须复杂数据处理的程序（如：数据的增删改查），剩下的20%宝贵时间来进行有难度的开发。比如，以新闻发布系统为例，需要开发以下方面的程序：新闻的录入，新闻的修改，新闻的列表（包括分页）,新闻的删除等。而这些操作很少需要对数据进行处理，顶多进行非空限制或字数限制,可以看成是体力活。
+
+为了这80%的简单程序开发耗掉大量的精力实在可惜，把开发普通程序的时间挤出来去进行那20%有难度的攻关岂不更好。
+
+锐思网络工作室从实际开发出发，编写了ReisWeb easydo闪速开发工具箱，该工具箱里封装了ReisRepeater(无分页数据列表),ReisLister（有分页数据列表）,ReisEditer（数据编辑器）,ReisInserter（数据增加器）,DbHelper（数据库操作辅助器）五大工具，都是静态方法，可直接在页面调用或在CS文件里使用。easydo工具箱的特点是面向表格，易建易改，安全高效。
+
+此次发布的版本为1.0版，该组件简单易用，面向的使用者为：ASP.NET(C#)开发人员,网页爱好者，网站美编等。锐思网络工作室已使用它进行过三个网站的程序编写，实践证明，引入easydo能够简化开发流程和缩短开发时间,为项目开发效率带来很大改善。
+
+安装方法：
+
+一，加入到正在开发的网站：
+
+1.将 reisweb.dll 复制到网站的Bin文件夹
+
+2.在web.config的appSettings添加以下内容
+
+<add key="ReisDb" value="|DataDirectory|\db.mdb" />
+<add key="SitePath" value="/test" />
+
+注：ReisDb的Value为数据库存放完整路径，|DataDirectory| 是指App_Data文件夹，在里面放入数据库。SitePath是虚拟目录名称，以防止图片上传及HTML编辑器出错，如为根目录，则保留为空。
+
+3.如需使用文件上传功能，则还需在根目录下建立 userfiles 文件夹。如果需要使用HTML编辑器，请将下载包内的FredCK.FCKeditorV2.dll文件和fckeditor文件夹复制到根目录。
+
+二，新建网站中使用它：
+
+1.用VS新建个网站，然后在网站上增加App_Data文件夹，Bin文件夹，web.config文件。
+
+2.将 reisweb.dll 放入到Bin文件夹
+
+3.将web.config里的<appSettings/>字段用以下内容替换
+
+<appSettings>
+<add key="ReisDb" value="|DataDirectory|\db.mdb" />
+<add key="SitePath" value="/test" />
+</appSettings>
+
+注：ReisDb的Value为数据库存放完整路径，|DataDirectory| 是指App_Data文件夹，在里面放入数据库。SitePath是虚拟目录名称，以防止图片上传及HTML编辑器出错，如为根目录，则保留为空。
+
+4.如需使用文件上传功能，则还需在根目录下建立 userfiles 文件夹。如果需要使用HTML编辑器，请将下载包内的FredCK.FCKeditorV2.dll，fckeditor文件夹复制到根目录。
+
+使用方法：
+
+无分页重复器ReisRepeater,返回string
+
+Reisweb.ReisRepeater.doReapeat(string strSource, string strAddSql,string strRowNum, string TorSql, string strRepeater)
+strSource:数据来源，可以为表名或SQL语句，当为表名时，程序会自动生成SQL语句
+strAddSql:排序字串或其它，在使用时会附加在SQL语句后
+strRowNum:数据条数,空值则返回所有,当数据源为SQL时，此字段无效
+TorSql:表为t，sql为s
+strRepeater:重复字串，{n}表示字段在数据表中的位置索引(从0开始)。比如，news表中有nid,title,content三个字段,则nid可用{0}表示，title可用{1}表示，content可用{2}表示
+
+例：Reisweb.ReisRepeater.doReapeat("news","order by nid desc ","t","<tr><td>{0}</td><td>{1}</td></tr>")
+表示，按nid降序查找news表中的数据，然后将数据替换进<tr><td>{0}</td><td>{1}</td></tr>里的相关部位，不断进行重复。
+
+该例会生成下例代码：
+
+<tr><td>13</td><td>锐思发布easydo工具箱</td></tr>
+<tr><td>12</td><td>锐思手机导游发布</td></tr>
+<tr><td>11</td><td>WAP开发的技巧</td></tr>
+…
+
+有分页数据列表 ReisLister,返回string
+
+Reisweb.ReisLister.doList(string strSource, string strAddSql, string TorSql, string strFormatStr, string numPaged)
+
+strSource:数据来源，数据表名或SQL，如果是表名，则会自动生成查询表的sql语句
+strAddSql:排序字串或其它sql字串，会附加在SQL后
+TorSql:表为t，SQL为s
+strFormatStr:重复的填充字符串
+isPaged:分页条数
+
+注,填充数据不再是ReisRepeater的字段索引,而是按以下格式构成的数据：
+[数据表中列名|值处理(左截left(n)/右截right(n)/中截mid(m,n))|值替换（比如：分类中显示的classid替换为分类名）,格式为 原值:替换值;...]
+
+例：string strFormat = "<tr><td>[ncid||0:零;1:壹;2:贰;3:叁;]</td><td>[ncname|mid(0,4)|]</td><td>[ncid||]</td></tr>";
+string getUserList =Reisweb.ReisLister.doList("reis_news_class", "", "0", strFormat, "2");
+
+数据增加器 ReisInserter,返回string
+
+
+Reisweb.ReisInserter.doInsert(string ExcuteTable, string strFormat,string strShow)
+
+ExcuteTable:表名
+
+strFormat:特定格式的字符串:[1表内字段名|2控件类型|3控件默认值|4控件前的标题|5控件插入字段（比如JS事件）|6控件特殊标记|7控件后文字说明|8是否进行防注入替换，非空为执行],如[ntitle|text|默认|标题|onclick=\"alert('123')\"|notnull|这里输入标题|yes]
+
+strShow:执行成功后的显示字串，可直接写JS，比如：<script>alert('添加成功');</script> 
+        
+注：strFormat特定格式的字符串详解。
+
+[1表内字段名|2控件类型|3控件默认值|4控件前的标题|5控件插入字段（比如JS事件）|6控件特殊标记|7控件后文字说明|8是否进行防注入替换，非空为执行]
+
+1.表内字段名，如：NEWS表中有 title字段，则直接填写为title
+
+2.控件类型，可为text(文本框控件),password(密码框控件),hidden(隐藏控件),textarea(文本区域控件),checkbox(多选框控件),radio(单选框控件),select(下拉菜单控件),file(文件上传控件),html(Html编辑器控件)
+
+3.控件默认值,如：需要在文章录入时传入时间，则可用当前时间字符串替代,也可以输入SQL语句，如果是多选框，单选框，下拉菜单,要按这样的格式:sql<select ncname,ncid from News_Class> (说明：查找项为两项，前项会成为显示字串，后项会成为选中值)，其它的可用sql<select ncname from News_Class where nid=1>这样的格式
+
+4.控件前的标题，如：在标题文本框前，需要说明该文本框是写标题的，则输入 标题 
+
+5.控件插入字段，此字串会直接插入到控件当中(需要对 " 进行转义写为 \")，可加入class,onXXXX等值，如：需要当前控件引用名为textinput的样式，则可直接写为 class=\"textinput\"
+
+6.控件输入值的简单判断（服务器端处理），可填为num(要求为数字),email(要求为邮箱名称),notnull(要求为非空),如：在新增文章时，需要输入初始浏览次数，则可填写为num，当用户在 浏览数 一栏输入的非数字时（包括空值），点击提交后，会提示 “浏览数 必须为数字”
+
+7.控件后显示字符串，可以填写该控件说明，或放入图标或触发js的元素。如：在 标题 文本框后，需要加入说明该项是标题，则直接填写“ 
+请输入标题”
+
+8.是否执行防注入替换，非空为执行。会将有注入危险的符号将会替换为其它安全字符，如 '(单引号) 将会替换为‘(中文引号);会将有注入危险的词插入x进行替换为安全词，如 输入框里有 excute 会被换为 excutex.
+
+例:
+
+Reisweb.ReisInserter.doInsert("ks_cyberadd", "[addtitle|text||名称:||||y][addintro|textarea||描述:||||y] [addemail|text||Email:||email|输入您的Email，以便我们与您联系|][addneedad|select|是:是;否:否;|领取免费广告位:||||] 
+[addip|hidden|"+Request.UserHostAddress+"|||||]", "<script>alert('添加成功');</script>")
+
+数据编辑器 ReisEditer 返回string
+
+Reisweb.ReisEditer.doEdit(string ExcuteTable, string strLimit, string strFormat, string strShow)
+ExcuteTable:表名
+strLimit:限定字串，如：id=8
+strFormat:特定格式的字符串,请参照上面的ReisInserter说明
+strShow:执行成功后的显示字串，可直接写JS，比如：<script>alert('添加成功');</script>
+
+注:数据编辑器ReisEditer与数据添加器ReisInserter的参数使用方法相同，唯一不同的是数据编辑器ReisEditer的里有4个参数，新增了第二 
+个参数，用于找出确定修改的值，可直接写sql 不写where，如，要对id号为8的文章进行编辑，可直接填写 id=8 
+
+最后，附：
+
+1.编辑器与添加器会自动生成表单(table结构)，table会有一个ID，如果需要控制编辑器与添加器的样式，可以直接对这个ID写CSS控制，或控制外层容器的尺寸。
+
+2.编辑器与添加器的strFormat(特定格式的字符串)构成相同，参数仅有一个差异(strLimit)，在实际操作中，可先编写数据添加页面，然后进行复制，稍加修改(改类名及方法名，再加上strLimit参数)便可得到编辑页面.
+
+3.因为直接对生成的HTML控件进行操作，所以会比.net 控件效率更高些
+
+4.请在初次使用时，阅读此说明文档，并适当进行练手，掌握以后，就可以感受到它的方便快速
+
+5.使用easydo工具箱里的工具可以让WEB程序变成面向表格的设计模型，建立起来更快速，修改起来也方便
+
+6.本工具箱供企业与个人免费使用，使用者唯一需要做的就是往我邮箱里发个邮件与我说声即可，邮件地址：web@reisweb.cn
+
+        
+
+
+
+												锐思网络工作室 张飞
+												2010-06-14 AM 03:00
+												
