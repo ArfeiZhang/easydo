@@ -13,8 +13,10 @@ public partial class newslist : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string newsClassId = Reisweb.ReisUtils.getRQ("class","");
-        
+        string newsClassId = Reisweb.ReisUtils.getRQ("class", "");
+
         string sql = "select * from News order by nid desc";
-        if (newsClassId != "") { sql = "select * from News where nclass="+ newsClassId +" order by nid desc"; }
+        if (newsClassId != "") { sql = "select * from News where nclass=" + newsClassId + " order by nid desc"; }
+    }
+}
 
