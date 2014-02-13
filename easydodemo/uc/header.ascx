@@ -4,13 +4,13 @@
 
   <!--miannav start-->
   <div id="miannav">
-   <div id="logo"><a href="http://www.reisweb.cn">锐思网络工作室</a></div>
+   <div id="logo"><a href="https://github.com/ArfeiZhang/easydo">Reisweb Easydo</a></div>
    <div id="nav">
     <ul>
 	 
 	 <li><a href="index.aspx" title="首页">首页</a></li>
 	 <% =Reisweb.ReisRepeater.doReapeat("news_class", "", "", "t", "<li><a href=\"index.aspx?class={0}\" title=\"{3}\">{3}</a></li>")%>
-<li><a href="manage/newslist.aspx" title="管理后台">管理后台</a></li>
+<li><a href="manage/newslist.aspx" title="管理后台">Manage</a></li>
 	</ul>
    </div>
   </div>

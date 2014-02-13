@@ -10,13 +10,14 @@ namespace Reisweb
 {
     public class DBHelper
     {
-        static bool isAccess;
-        static string strReisDb;
+        static bool isAccess=true;
+        static string strReisDb = ReisUtils.GetDBConnection(out isAccess);
 
         DBHelper()
         {
             isAccess = true;
             strReisDb = ReisUtils.GetDBConnection(out isAccess);
+            Console.Out.WriteLine("in");
         }
 
 

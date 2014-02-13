@@ -17,6 +17,9 @@ public partial class newslist : System.Web.UI.Page
 
         string sql = "select * from News order by nid desc";
         if (newsClassId != "") { sql = "select * from News where nclass=" + newsClassId + " order by nid desc"; }
+
+        string strFormat = "<li><a href=\"newsinfo.aspx?id=[nid||]\" target=\"_blank\" title=\"[ntitle||]\">[ntitle||]</a><span>[ncreatetime||]</span></li>";
+        ltNewsList.Text =Reisweb.ReisLister.doList(sql, "", "s", strFormat, "14","");
     }
 }
 
